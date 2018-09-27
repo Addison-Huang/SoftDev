@@ -7,7 +7,7 @@ K10 -- Jinja Tuning
 <!DOCTYPE html>
 <html>
   <head>
-    <title> {{foo}} </title> <!--#jinja-->
+    <title> {{title}} </title> <!--#jinja--> <!--the title of the page -->
     <style>
       table, th, td {
       border: 1px solid black;
@@ -15,14 +15,19 @@ K10 -- Jinja Tuning
     </style>
   </head>
   <body>
+<<<<<<< HEAD
+    <h1> {{title}} </h1> <!-- the title of the page -->
+    <h2>The randomly selected occupation is... {{randomOcc}}</h2> <!-- random occupation-->
+=======
     <h1> {{foo}} </h1>
     <h2>The randomly selected occupation is... {{boo}}</h2>
+>>>>>>> b7cdf0de7d4c0703c1d3aa37272a499d4485158f
     <table style="width:100%">
       <tr>
 	<th>Job Class</th>
 	<th>Percentage</th>
       </tr>
-      {% for item in collection %}
+      {% for item in collection %} <!-- for loop to print out the job class and percentage -->
       <tr>
 	<td>{{item}}</td>
 	<td>{{collection[item]}}</td>

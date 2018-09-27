@@ -1,11 +1,12 @@
 '''
 Team Track -- Addison Huang and Stefan Tan
-Softdev1 pd6
-K10 Jinja Tuning
-2018 09 24
+SoftDev1 pd6
+K10 -- Jinja Tuning
+2018-09-21
 '''
 
 from flask import Flask, render_template
+from util import ants
 import csv, random
 
 app=Flask(__name__)
@@ -17,6 +18,7 @@ def link():
 
 @app.route("/occupations")
 def occupations():
+<<<<<<< HEAD
     reader = csv.reader(open('occupations.csv')) #opens and reads the csv file
     next(reader) # skips the headers
     d={} #intialized the dictionary
@@ -26,26 +28,16 @@ def occupations():
     percentages = list(d.values()) #makes a list of all the occuaption
     result = random.choices(occupations, percentages)
     #returns a list of size 1 with a random occupation choosen based on the percentages
+=======
+>>>>>>> 78a6947b114acd93b714f3968ac2db4f678387b8
     return render_template("template.html",
-                           boo = result.pop(),
-                       foo="Occupations in the United States", #the title will be "Occupations in the United States"
-                       collection=d #d replaces collection in the html
+                           randomOcc = ants.randomizer(ants.occReader()),
+                       title ="Occupations in the United States", #the title will be "Occupations in the United States"
+                       collection = ants.occReader() #replaces collection in the html
 )
 
 if __name__ == "__main__":
     app.debug = True
     app.run()
-
-
-
-
-
-
-
-
-
-
-
-
 
 
