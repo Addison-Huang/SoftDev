@@ -22,7 +22,6 @@ def occupations():
     d={} #intialized the dictionary
     for row in reader: #iterates through the csv file and updates the dictionary accordingly
         d[row[0]]=float(row[1])
-    d.pop('Total') # gets rid of the last row
     occupations = list(d.keys()) #makes a list of all the occupations
     percentages = list(d.values()) #makes a list of all the occuaption
     result = random.choices(occupations, percentages)
