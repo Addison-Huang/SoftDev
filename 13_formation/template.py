@@ -15,14 +15,19 @@ def root():
     print(app)
     return render_template("template.html")
 
-@app.route("/auth")
+@app.route("/auth", methods = ["GET", "POST"])
 def authenticate():
     print(request)
     print(request.method)
     print(request.args)
-    return render_template("response.html", greeting = "Why hello there",
+    if (request.method == "GET"):
+        return render_template("response.html", greeting = "Why hello there",
                            method = request.method,
                            username = request.args["username"],
+                           args = request.args)
+    return render_template("response.html", greeting = "Why hello there",
+                           method = request.method,
+                           username = request.form["username"],
                            args = request.args)
 
 if __name__ == "__main__":
