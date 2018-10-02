@@ -1,8 +1,15 @@
+<!--
+Firefoxes
+Addison Huang Matthew Ming 
+SoftDev1 pd6
+K15 Oh yes, perhaps I do
+2018-10-03
+-->
 {% extends "base.html" %}
 {% block title %}Welcome{% endblock %} 
 {% block content %}
 <h1> {{greeting}} {{username}} </h1> <br>
-<form action = "/">
+<form action = "/" , method="POST">
 		<input type = "submit" name = "submit" value = "logout">
 	</form>
 {% endblock %}

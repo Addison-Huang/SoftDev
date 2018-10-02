@@ -1,9 +1,22 @@
+<!--
+Firefoxes
+Addison Huang Matthew Ming 
+SoftDev1 pd6
+K15 Oh yes, perhaps I do
+2018-10-03
+-->
+
 {% extends "base.html" %}
 {% block title %}
 Login
 {% endblock %}
 {% block content %}
-    <form action="/auth">
+{% set msgs = get_flashed_messages() %}
+{% for each in msgs %}
+{{ each }}
+<br>
+{% endfor %}
+    <form action="/auth" method="POST">
       <input type="text" name="username"></input>
       <input type="password" name="password"></input>
       <input type="submit" name="submit"> </input>

@@ -11,7 +11,12 @@ K14 Do I know you?
 Login
 {% endblock %}
 {% block content %}
-    <form action="/auth">
+{% set msgs = get_flashed_messages() %}
+{% for each in msgs %}
+{{ each }}
+<br>
+{% endfor %}
+    <form action="/auth" method="POST">
       <input type="text" name="username"></input>
       <input type="password" name="password"></input>
       <input type="submit" name="submit"> </input>
