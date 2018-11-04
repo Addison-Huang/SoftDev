@@ -1,0 +1,52 @@
+h1 {
+    background-color: #cfcdcc;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    margin:0px;
+    padding:0px:
+}
+
+h3 {
+    font-weight:bold;
+}
+
+body {
+    background-color: gray;
+}
+
+ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+
+a {
+    text-decoration: none;
+    color: #cfcdcc;
+    font-weight:bold;
+}
+
+.container {
+    display: table-cell;
+    font-family: Arial;
+}
+
+#sidebar {
+    width:10%;
+    float:left;
+}
+
+#main {
+    width:90%;
+    float:left;
+}
+
+footer {
+    background-color: #615f5e;
+    text-align:right;
+    color: #8c8784;
+    padding:10px;
+}
+
+    

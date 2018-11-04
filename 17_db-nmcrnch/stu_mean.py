@@ -51,7 +51,7 @@ def addCourse(stu_id, course, grade): #adds a row to the course db
     
         
 dispStudent(1)
-#createTable()
+createTable()
 updateTable()
 addCourse(1, "ballroom", 1000)
 
